@@ -60,6 +60,8 @@ public class FunctionLibrary{
 	public static void launchUrl() {
 		driver.get(p.getProperty("url"));
 	}
+	
+	
 //	Wait for Web Element to display on page
 	public static void waitForElement(String locatorType, String locatorValue, String testData) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(testData)));
@@ -216,6 +218,33 @@ public class FunctionLibrary{
 	
 	}
 	
+//	Delete Item from Table
+	public static void DeleteItemFromTable(String locatorType, String locatorValue, String testData) throws Throwable{
+		WebDriverWait wait;
+		WebElement ftable;
+		WebElement ftableBody;
+		List<WebElement> trows;
+		List<WebElement> tcols;
+		String orderId;
+		ftable=driver.findElement(By.xpath(locatorValue));
+		ftableBody=ftable.findElement(By.tagName("tbody"));
+		trows=ftableBody.findElements(By.tagName("tr"));
+		for(int i=1; i<=trows.size(); i++) {
+			tcols=trows.get(i).findElements(By.tagName("td"));
+			orderId=tcols.get(0).getText();
+			if(orderId.equalsIgnoreCase(testData)) {
+				WebElement del = (WebElement) tcols.get(9).findElement(By.linkText("Delete"));
+				del.click();
+				wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				wait.until(ExpectedConditions.alertIsPresent());
+				driver.switchTo().alert().accept();
+				Thread.sleep(3000);
+				break;
+			}
+		}
+	}
+	
+	
 //	Take Screen Shot
 	public static void screenShot(String screenShotName) throws Throwable {
 		TakesScreenshot ts = (TakesScreenshot)driver;
@@ -250,16 +279,4 @@ public class FunctionLibrary{
 		driver.navigate().refresh();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

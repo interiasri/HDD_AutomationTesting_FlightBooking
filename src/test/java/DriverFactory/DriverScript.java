@@ -60,6 +60,9 @@ public class DriverScript{
 						if(objType.equalsIgnoreCase("refreshPage")) {
 							FunctionLibrary.refreshPage();
 						}
+						if(objType.equalsIgnoreCase("DeleteItemFromTable")) {
+							FunctionLibrary.DeleteItemFromTable(locatorType, locatorValue, testData);
+						}
 						status=true;
 					}
 					
