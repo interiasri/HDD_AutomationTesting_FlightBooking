@@ -233,7 +233,7 @@ public class FunctionLibrary{
 			tcols=trows.get(i).findElements(By.tagName("td"));
 			orderId=tcols.get(0).getText();
 			if(orderId.equalsIgnoreCase(testData)) {
-				WebElement del = (WebElement) tcols.get(9).findElement(By.linkText("Delete"));
+				WebElement del = tcols.get(9).findElement(By.linkText("Delete"));
 				del.click();
 				wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 				wait.until(ExpectedConditions.alertIsPresent());

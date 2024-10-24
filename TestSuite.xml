@@ -1,0 +1,7 @@
+<suite name ="Flight Booking App">
+	<test name="App Test">
+		<classes>
+			<class name="DriverFactory.AppTest"></class>
+		</classes>
+	</test>
+</suite>

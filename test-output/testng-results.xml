@@ -16,26 +16,14 @@
     <line>
       <![CDATA[Vaild Page]]>
     </line>
-    <line>
-      <![CDATA[Vaild Page]]>
-    </line>
-    <line>
-      <![CDATA[Vaild Page]]>
-    </line>
   </reporter-output>
-  <suite started-at="2024-10-23T21:40:33 IST" name="Default suite" finished-at="2024-10-23T21:41:27 IST" duration-ms="53632">
+  <suite started-at="2024-10-24T12:57:09 IST" name="Flight Booking App" finished-at="2024-10-24T12:57:58 IST" duration-ms="48345">
     <groups>
     </groups>
-    <test started-at="2024-10-23T21:40:33 IST" name="Default test" finished-at="2024-10-23T21:41:27 IST" duration-ms="53632">
+    <test started-at="2024-10-24T12:57:09 IST" name="App Test" finished-at="2024-10-24T12:57:58 IST" duration-ms="48345">
       <class name="DriverFactory.AppTest">
-        <test-method signature="startTest()[pri:0, instance:DriverFactory.AppTest@117159c0]" started-at="2024-10-23T21:40:34 IST" name="startTest" finished-at="2024-10-23T21:41:27 IST" duration-ms="53585" status="PASS">
+        <test-method signature="startTest()[pri:0, instance:DriverFactory.AppTest@27406a17]" started-at="2024-10-24T12:57:10 IST" name="startTest" finished-at="2024-10-24T12:57:58 IST" duration-ms="48295" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[Vaild Page]]>
-            </line>
-            <line>
-              <![CDATA[Vaild Page]]>
-            </line>
             <line>
               <![CDATA[Vaild Page]]>
             </line>
@@ -54,6 +42,6 @@
           </reporter-output>
         </test-method> <!-- startTest -->
       </class> <!-- DriverFactory.AppTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- App Test -->
+  </suite> <!-- Flight Booking App -->
 </testng-results>
